@@ -3,11 +3,13 @@
 # AND101 Milestone 1 - **Team/App Name**
 
 Submitted by:
-- **Team Member 1 Name Here**
-- **Team Member 2 Name Here**
-- **etc**
+- **Allen ST Fort**
+- **Carolina Yuka Nakada**
+- **David Cao**
+- **Elian D. Deogracia-Brito**
+- **Kusum Gandham**
 
-Time spent: **X** hours spent in total
+Time spent: **?** hours spent in total
 
 ## Summary
 
@@ -21,12 +23,12 @@ If we had to describe this milestone in three (3) emojis, they would be: **emoji
 
 The following REQUIRED features are completed:
 
-- [ ] Creation of GitHub Organization and Group Project Repo
+- [x] Creation of GitHub Organization and Group Project Repo
 - [ ] Updated Course Portal group info with Group Name and App Description
 
 The following REQUIRED files are included:
 
-- [ ] Included 📄 `brainstorming.md`, which contains:
+- [x] Included 📄 `brainstorming.md`, which contains:
   - [ ] Our initial brainstorming ideas (6+ ideas)
   - [ ] 5-category evaluation of our top 3 ideas
   - [ ] Final app idea chosen
