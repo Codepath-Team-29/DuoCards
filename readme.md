@@ -49,3 +49,5 @@ The following EXTRA features are implemented:
 ## Notes
 
 Here's a place for any other notes on this milestone!
+
+- [Brainstorming](https://github.com/Codepath-Team-29/DuoCards/blob/main/brainstorming.md)
