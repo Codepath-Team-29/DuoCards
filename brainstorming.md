@@ -20,43 +20,20 @@
 15. App that gets the chemical composition of all the ingrediants that you buy that day
 16. Anidroid ~ app that uses anime.
 
-## 5-Category Evaluation of our top 3 ideas
+## Our Top 3 ideas
 
 Top 3 choices
 1. Duolingo Cards ~ Duolingo API
 2. Music Player ~ Spotify API
-3. 
+3. Recipe Planner
 
-**How unique is it:**
-**How is it better than a website:**
-**Value to the audience:**
-**How well will your friends/family respond to this?**
-**Market value:**
-## Final App Chosen
-
-- This app
-
-
+## New App Ideas - Evaluate and Categorize
+1. Duolingo Cards
+   - **Description**: Provides an interface for users to view and track their duolingo progress as well as store the words of their language into flashcards all in one app! Learners will be able continue to fuel their duolingo passion with our creative app!  
+   - **Category:** Social Networking / Learning
+   - **Mobile:** Mobile is essential for ease of use and access. Most users would just want a quick peek at their and other peers progress, instead of having to login and view it. It would also be easier to just learn from your phone.
+   - **Story:** Fuels the competitive nature of learners to continue learning their language. 
+   - **Market:** Any user who already has a duolingo account will be able to use this app. 
+   - **Habit:** Users are using this daily to check their ranking and to continue to learn cards that they've forgotten. 
+   - **Scope:** V1 would be a basic interface of a users duolingo profile and the current words that they have already memorized. V2, users would be able to see their friends progress.
 ---
-
-Mobile: How uniquely mobile is the product experience?
-
-What makes your app more than a glorified website?
-Story: How compelling is the story around this app once completed?
-
-How clear is the value of this app to your audience?
-How well would your friends or peers respond to this product idea?
-Market: How large or unique is the market for this app?
-
-What's the size and scale of your potential user base?
-Does this app provide huge value to a niche group of people?
-Do you have a well-defined audience of people for this app?
-Habit: How habit-forming or addictive is this app?
-
-How frequently would an average user open and use this app?
-Does an average user just consume your app, or do they use it to create something?
-Scope: How well-formed is the scope for this app?
-
-How technically challenging will it be to complete this app by the deadline?
-Is a stripped-down version of this app still interesting to build?
-How clearly defined is the product you want to build?
