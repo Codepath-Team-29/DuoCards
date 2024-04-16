@@ -13,9 +13,7 @@ Time spent: **6** hours spent in total
 
 ## Summary
 
-This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **short description of your app**
-
-If we had to describe this milestone in three (3) emojis, they would be: **emojis here**
+Duo cards is an app that combines the gamification of duolingo with the study habits of the flashcard app Anki! This app will login to your Duolingo app and grab all the words that you have learned and create flashcards for them! Gone are the time of manually having to input a new card everytime you learn a new word. Let this app do the work for you!
 
 ## Milestone Requirements
 
