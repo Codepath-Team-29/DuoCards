@@ -1,7 +1,7 @@
 # Plan
 
 Summary
-- recommend users music based on, 
+- recommend users random music based on genre. 
 
 1. Configure the spotify API ~ one person to do this
    - Elian / Allen
@@ -15,6 +15,24 @@ Summary
   - cayuka
   
 4. Grab 20 random songs?
+
+## Tasks
+1. Configure the spotify API so the rest of the team can use the end points 
+- Elian
+- DEADLINE: end of wednesday
+
+2. Play around with the spotify API and possibly figure out how to get a random song / track
+- Allen
+- David
+- DEADLINE: end of friday
+
+3. Wireframes
+- cayuka
+- DEADLINE: end of thursday
+
+4. update the README and brainstorm more ideas / help others / designing?
+- kusum
+- DEADLINE: end of friday
 
 
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
