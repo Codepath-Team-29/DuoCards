@@ -27,6 +27,9 @@ Top 3 choices
 2. Music Player ~ Spotify API
 3. Recipe Planner
 
+## Final Chosen Idea
+1. Duolingo Cards
+
 ## New App Ideas - Evaluate and Categorize
 1. Duolingo Cards
    - **Description**: Provides an interface for users to view and track their duolingo progress as well as store the words of their language into flashcards all in one app! Learners will be able continue to fuel their duolingo passion with our creative app!  
