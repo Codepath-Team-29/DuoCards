@@ -58,6 +58,13 @@ Summary
     - make demo video
     - submit project
 
+## Features
+https://www.figma.com/file/qITS56UmTvnmokyxlmCJ14/Untitled?type=design&node-id=0-1&mode=design
+1. There will be a list of genres (recycler view)
+2. When we click on a genre, it will give us a list of songs (recycler view)
+3. When we click on a song, it should play a song and open up a new activity with information on the song
+   eg: artist name, song title, genre, etc.
+4. Long click will let you select multiple songs to create a playlist
 
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
