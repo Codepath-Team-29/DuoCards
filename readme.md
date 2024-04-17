@@ -34,6 +34,30 @@ Summary
 - kusum
 - DEADLINE: end of friday
 
+@KUSUM will float between all tasks
+  
+3. **April 17**
+      - configure spotify API with token and authorization
+      - @elian
+
+4. **April 18**
+      - finish wireframes and overall app design
+      - @cayuka
+
+4. **April 19**
+      - Figure out how to grab a random spotify song based on genre
+      - @david @allen
+
+6. **April 20 - 21**:
+     - building the app
+     - person clicks on a button, grabs a song
+     - song starts playing
+     - displays 5+ songs to user
+     - multiple gestures (tap and a long tap to select multiple songs)
+7. **April 22**
+    - make demo video
+    - submit project
+
 
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
