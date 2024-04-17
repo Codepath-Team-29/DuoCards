@@ -1,6 +1,20 @@
 # Plan
 
-1. 
+Summary
+- recommend users music based on, 
+
+1. Configure the spotify API ~ one person to do this
+   - Elian / Allen
+   - Grab by artist
+   - dial in concert?
+   - GRAB RANDOM
+   - take a picture and generate a playlist from that picture
+   - https://perryjanssen.medium.com/getting-random-tracks-using-the-spotify-api-61889b0c0c27
+
+2. Wireframes
+  - cayuka
+  
+4. Grab 20 random songs?
 
 
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
