@@ -68,7 +68,7 @@ https://www.figma.com/file/qITS56UmTvnmokyxlmCJ14/Untitled?type=design&node-id=0
 
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
-# AND101 Milestone 1 - **Duo Cards**
+# AND101 Milestone 2 - **Spotify**
 
 Submitted by:
 - **Allen ST Fort**
@@ -89,28 +89,31 @@ Duo cards is an app that combines the gamification of duolingo with the study ha
 
 The following REQUIRED features are completed:
 
-- [x] Creation of GitHub Organization and Group Project Repo
-- [x] Updated Course Portal group info with Group Name and App Description
+- [ ] Assign features to each member of your group
+- [ ] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
-- [x] Included 📄 `brainstorming.md`, which contains:
-  - [x] Our initial brainstorming ideas (6+ ideas)
-  - [x] 5-category evaluation of our top 3 ideas
-  - [x] Final app idea chosen
-- [x] Included 📄 `project_spec.md`, which contains:
-  - [x] App Overview: Description and evaluation
-  - [x] App Spec: User features, Chosen API(s), User Interactions
-  - [x] Wireframe image(s)
+- [ ] Updated 📄 `project_spec.md`, which contains:
+  - [X] App Overview (Milestone 1)
+  - [X] App Spec (Milestone 1)
+  - [ ] Checked off 2+ completed features
+  - [ ] 2+ Videos/GIFs of build progress
 
-The following BONUS features are implemented:
-
-- [x] Added digital wireframe/mockup image(s)
-- [ ] Added a Video/GIF of an interactive prototype
+- [ ] Our 🎥 Demo Video
+  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
 - [ ] List anything else that you added to improve your submission!
+
+## 🎥 Demo Video
+
+Here's a video that demos all of the app's implemented features:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+
+VIDEO created with **your chosen video tool**
 
 ## Notes
 
