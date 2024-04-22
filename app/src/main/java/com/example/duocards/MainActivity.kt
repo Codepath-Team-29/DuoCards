@@ -1,25 +1,20 @@
 package com.example.duocards
 
-import android.media.Image
+//import com.codepath.asynchttpclient.AsyncHttpClient
+//import com.codepath.asynchttpclient.RequestParams
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
+import com.squareup.picasso.Picasso
 import cz.msebera.android.httpclient.Header
-import cz.msebera.android.httpclient.entity.StringEntity
 import cz.msebera.android.httpclient.message.BasicHeader
 import org.json.JSONObject
 
@@ -32,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     //REDIRECT_URI="http://localhost:3000"
 
     //var accessToken: String? = null;
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
         client.get(
             this@MainActivity, // Context
-            "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5", // URL
+            "https://api.spotify.com/v1/artists/2BM933ADIluGGrPBOhPgIt", // URL
             headers.toTypedArray(), // Headers
             null, // Params
             object : JsonHttpResponseHandler() {
@@ -108,8 +104,21 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
                     // Handle success
                     val artistName = response?.getString("name")
+                    val artistImageArray = response?.getJSONArray("images")
+
+                    // Check if the artistImageArray is not null and contains images
+                    if (artistImageArray != null && artistImageArray.length() > 0) {
+                        val image = artistImageArray.getJSONObject(0)
+                        val imageUrl = image.getString("url")
+
+                        // Load image into ImageView using Picasso
+                        val imageView = findViewById<ImageView>(R.id.imageView)
+                        Picasso.get().load(imageUrl).into(imageView)
+                    }
+
                     findViewById<TextView>(R.id.artistNameTextView).text = "Artist Name\n$artistName"
                     Log.d("Spotify API", "Success! Artist details: ${response?.toString()}")
+
                 }
             }
         )
@@ -128,7 +137,10 @@ class MainActivity : AppCompatActivity() {
 
         client.get(
             this@MainActivity, // Context
-            "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5/top-tracks?market=US", // URL
+//            "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5/top-tracks?market=US", // URL
+//            "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02/top-tracks?market=US", // Taylor Swift
+
+            "https://api.spotify.com/v1/artists/2BM933ADIluGGrPBOhPgIt/top-tracks?market=US",
             headers.toTypedArray(), // Headers
             null, // Params
             object : JsonHttpResponseHandler() {
@@ -141,19 +153,22 @@ class MainActivity : AppCompatActivity() {
                     // Handle success
                     val tracksArray = response?.getJSONArray("tracks")
                     val topTracksList = ArrayList<String>()
+                    val topURL = ArrayList<String>()
 
                     // Extract track names from the response
                     if (tracksArray != null) {
                         for (i in 0 until tracksArray.length()) {
                             val track = tracksArray.getJSONObject(i)
                             val name = track.getString("name")
+                            val url = track.getString("preview_url")
                             topTracksList.add(name)
+                            topURL.add(url)
                         }
                     }
 
                     // Pass the list to the RecyclerView adapter
                     val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-                    val adapter = ArtistAdapter(topTracksList)
+                    val adapter = ArtistAdapter(topTracksList, topURL) { previewUrl -> playTrack(previewUrl) }
                     recyclerView.adapter = adapter
                     recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
 
@@ -161,6 +176,34 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         )
+    }
+
+    private fun playTrack(previewUrl: String?) {
+        if (previewUrl.isNullOrEmpty()) {
+            Log.e("MediaPlayer", "Error: Preview URL is null or empty")
+            return
+        }
+
+        try {
+            stopTrack()
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer()
+            }
+            mediaPlayer?.setDataSource(previewUrl)
+            mediaPlayer?.prepare()
+            mediaPlayer?.start()
+        } catch (e: Exception) {
+            Log.e("MediaPlayer", "Error playing track: ${e.message}")
+        }
+    }
+
+    private fun stopTrack() {
+        mediaPlayer?.apply {
+            if (isPlaying) {
+                stop()
+            }
+            reset()
+        }
     }
 
     override fun onStart() {
