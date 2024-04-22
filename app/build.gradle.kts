@@ -35,8 +35,14 @@ android {
     }
 }
 
+var appCompatVersion = "1.5.1" // Example - replace with the actual version you're using
+
 dependencies {
 
+    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation("com.loopj.android:android-async-http:1.4.10")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -45,14 +51,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    // import spotify api
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
-    //implementation("com.google.code.gson:gson:2.10.1")
-
-    implementation("com.spotify.android:auth:1.2.3") // Spotify Authentication library
-    // implementation("com.github.kaaes:spotify-web-api-android:0.4.1") // Spotify Web API interaction
-    implementation("com.google.code.gson:gson:2.8.5") // For JSON parsing
 
 
 
