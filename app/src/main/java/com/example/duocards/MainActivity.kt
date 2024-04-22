@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
                     // Handle failure
                     Log.d("Spotify API", "Failure to get response! ${errorResponse?.toString()}")
                 }
-
                 override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
                     // Handle success
                     Log.d("Spotify API", "Success! Response: ${response?.toString()}")
@@ -72,7 +71,8 @@ class MainActivity : AppCompatActivity() {
 
 
                     // TODO: This is where we call all the functions to use our API
-                    getArtistFromAPI(accessToken);
+                        getArtistFromAPI(accessToken)
+                        getArtistTopTracksFromAPI(accessToken)
 
                     // TODO: make a function that grabs a random song (from an artist - might be easier)
                     // TODO: Make a loop and call that function 20 times
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
         client.get(
             this@MainActivity, // Context
-            "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb", // URL
+            "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5", // URL
             headers.toTypedArray(), // Headers
             null, // Params
             object : JsonHttpResponseHandler() {
@@ -107,6 +107,56 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
                     // Handle success
+                    val artistName = response?.getString("name")
+                    findViewById<TextView>(R.id.artistNameTextView).text = "Artist Name\n$artistName"
+                    Log.d("Spotify API", "Success! Artist details: ${response?.toString()}")
+                }
+            }
+        )
+    }
+    private fun getArtistTopTracksFromAPI(accessToken: String?) {
+        if (accessToken.isNullOrEmpty()) {
+            Log.d("Spotify API", "Access token is null or empty.")
+            return
+        }
+
+        val client = AsyncHttpClient()
+
+        // Prepare the request headers
+        val headers = ArrayList<Header>()
+        headers.add(BasicHeader("Authorization", "Bearer $accessToken"))
+
+        client.get(
+            this@MainActivity, // Context
+            "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5/top-tracks?market=US", // URL
+            headers.toTypedArray(), // Headers
+            null, // Params
+            object : JsonHttpResponseHandler() {
+                override fun onFailure(statusCode: Int, headers: Array<out Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
+                    // Handle failure
+                    Log.d("Spotify API", "Failure to get artist details! ${errorResponse?.toString()}")
+                }
+
+                override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
+                    // Handle success
+                    val tracksArray = response?.getJSONArray("tracks")
+                    val topTracksList = ArrayList<String>()
+
+                    // Extract track names from the response
+                    if (tracksArray != null) {
+                        for (i in 0 until tracksArray.length()) {
+                            val track = tracksArray.getJSONObject(i)
+                            val name = track.getString("name")
+                            topTracksList.add(name)
+                        }
+                    }
+
+                    // Pass the list to the RecyclerView adapter
+                    val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+                    val adapter = ArtistAdapter(topTracksList)
+                    recyclerView.adapter = adapter
+                    recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+
                     Log.d("Spotify API", "Success! Artist details: ${response?.toString()}")
                 }
             }
