@@ -1,22 +1,4 @@
-# Plan
-
-Summary
-- recommend users random music based on genre. 
-
-1. Configure the spotify API ~ one person to do this
-   - Elian / Allen
-   - Grab by artist
-   - dial in concert?
-   - GRAB RANDOM
-   - take a picture and generate a playlist from that picture
-   - https://perryjanssen.medium.com/getting-random-tracks-using-the-spotify-api-61889b0c0c27
-
-2. Wireframes
-  - cayuka
-  
-4. Grab 20 random songs?
-
-## Tasks
+## Feature Assignment
 1. Configure the spotify API so the rest of the team can use the end points 
 - Elian
 - DEADLINE: end of wednesday
@@ -94,14 +76,14 @@ The following REQUIRED features are completed:
 
 The following REQUIRED files are included:
 
-- [ ] Updated 📄 `project_spec.md`, which contains:
+- [X] Updated 📄 `project_spec.md`, which contains:
   - [X] App Overview (Milestone 1)
   - [X] App Spec (Milestone 1)
   - [X] Checked off 2+ completed features
   - [X] 2+ Videos/GIFs of build progress
 
-- [ ] Our 🎥 Demo Video
-  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
+- [X] Our 🎥 Demo Video
+  - [X] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
