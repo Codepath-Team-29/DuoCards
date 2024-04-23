@@ -48,7 +48,7 @@ Here's a video that demos all of the app's implemented features:
 https://github.com/Codepath-Team-29/TuneFinder/assets/63488152/8b01c4ab-8d5b-48ea-81e7-4ce0ef97987c
 
 - [youtube link](https://www.youtube.com/watch?v=xSZjioKvSzQ)
-VIDEO created with **OBS + FFMPEG**
+- VIDEO created with **OBS + FFMPEG**
 
 
 ## Notes
