@@ -45,13 +45,16 @@ The following EXTRA features are implemented:
 
 Here's a video that demos all of the app's implemented features:
 
-<img src='GIFMaker_me (6).gif' title='Video Demo' width='' alt='Video Demo' />
+https://github.com/Codepath-Team-29/TuneFinder/assets/63488152/8b01c4ab-8d5b-48ea-81e7-4ce0ef97987c
 
-VIDEO created with **your chosen video tool**
+- [youtube link](https://www.youtube.com/watch?v=xSZjioKvSzQ)
+VIDEO created with **OBS + FFMPEG**
+
 
 ## Notes
 Progress GIF: Not completed version
 <img src='GIFMaker_me (5).gif' title='Build Progress' width='' alt='Build progress' />
+<img src='GIFMaker_me (6).gif' title='Video Demo' width='' alt='Video Demo' />
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
 
