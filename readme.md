@@ -111,12 +111,14 @@ The following EXTRA features are implemented:
 
 Here's a video that demos all of the app's implemented features:
 
-<img src='GIFMaker_me (5).gif' title='Build Progress' width='' alt='Build progress' />
+<img src='GIFMaker_me (6).gif' title='Video Demo' width='' alt='Video Demo' />
 
 VIDEO created with **your chosen video tool**
 
 ## Notes
 Progress GIF: Not completed version
+<img src='GIFMaker_me (5).gif' title='Build Progress' width='' alt='Build progress' />
+
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
 
 Here's a place for any other notes on this milestone!
