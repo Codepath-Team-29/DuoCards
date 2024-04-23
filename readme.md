@@ -111,7 +111,7 @@ The following EXTRA features are implemented:
 
 Here's a video that demos all of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='GIFMaker_me (5).gif' title='Build Progress' width='' alt='Build progress' />
 
 VIDEO created with **your chosen video tool**
 
