@@ -1,4 +1,4 @@
-# **Duo Cards**
+# **TuneFinder**
 
 ## Table of Contents
 
