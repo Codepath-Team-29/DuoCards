@@ -77,7 +77,7 @@ Submitted by:
 - **Elian D. Deogracia-Brito**
 - **Kusum Gandham**
 
-Time spent: **6** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Summary
 
@@ -89,15 +89,15 @@ Duo cards is an app that combines the gamification of duolingo with the study ha
 
 The following REQUIRED features are completed:
 
-- [ ] Assign features to each member of your group
-- [ ] Establish a goal time for completing each feature
+- [X] Assign features to each member of your group
+- [X] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
 - [ ] Updated 📄 `project_spec.md`, which contains:
   - [X] App Overview (Milestone 1)
   - [X] App Spec (Milestone 1)
-  - [ ] Checked off 2+ completed features
+  - [X] Checked off 2+ completed features
   - [ ] 2+ Videos/GIFs of build progress
 
 - [ ] Our 🎥 Demo Video
