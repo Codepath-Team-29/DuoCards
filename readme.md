@@ -81,7 +81,7 @@ Time spent: **10** hours spent in total
 
 ## Summary
 
-Duo cards is an app that combines the gamification of duolingo with the study habits of the flashcard app Anki! This app will login to your Duolingo app and grab all the words that you have learned and create flashcards for them! Gone are the time of manually having to input a new card everytime you learn a new word. Let this app do the work for you!
+This app uses the Spotfy API to pull songs for a certain artist.
 
 ## Milestone Requirements
 
