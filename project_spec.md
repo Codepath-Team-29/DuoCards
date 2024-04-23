@@ -61,7 +61,8 @@ Required Feature
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-![image](https://github.com/Codepath-Team-29/DuoCards/assets/63488152/4dda766e-e41d-4e78-97aa-1e58a93af573)
+![image](https://github.com/Codepath-Team-29/DuoCards/assets/63488152/ad6807a9-8260-44e7-a2e4-cde6de579a27)
+
 
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -75,6 +76,12 @@ Here's a place for any other notes on the app, it's creation
 process, or what you learned this unit!  
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+
+Progress Gif 1
+<img src='GIFMaker_me (5).gif' title='Build Progress' width='' alt='Build progress' />
+
+Progress Gif 2
+<img src='GIFMaker_me (6).gif' title='Video Demo' width='' alt='Video Demo' />
 
 ## License
 
