@@ -2,12 +2,17 @@ package com.example.duocards
 
 //import com.codepath.asynchttpclient.AsyncHttpClient
 //import com.codepath.asynchttpclient.RequestParams
+import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,11 +35,24 @@ class MainActivity : AppCompatActivity() {
 
     //var accessToken: String? = null;
     private var mediaPlayer: MediaPlayer? = null
+    private var accessToken: String? = null
+    private lateinit var queryLauncher: ActivityResultLauncher<Intent>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        queryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                val query = data?.getStringExtra("QUERY_RESULT")
+                if (!query.isNullOrEmpty()) {
+                    // Use the query for search operation
+                    loadArtistDetails(accessToken, query)
+                }
+            }
+        }
         getSpotifyToken()
     }
 
@@ -58,22 +76,38 @@ class MainActivity : AppCompatActivity() {
             params, // Params
             "application/x-www-form-urlencoded", // Content type
             object : JsonHttpResponseHandler() {
-                override fun onFailure(statusCode: Int, headers: Array<out Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
+                override fun onFailure(
+                    statusCode: Int,
+                    headers: Array<out Header>?,
+                    throwable: Throwable?,
+                    errorResponse: JSONObject?
+                ) {
                     // Handle failure
                     Log.d("Spotify API", "Failure to get response! ${errorResponse?.toString()}")
                 }
-                override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject?) {
+
+                override fun onSuccess(
+                    statusCode: Int,
+                    headers: Array<out Header>?,
+                    response: JSONObject?
+                ) {
                     // Handle success
                     Log.d("Spotify API", "Success! Response: ${response?.toString()}")
-                    val accessToken = response?.getString("access_token")
+                    accessToken = response?.getString("access_token")
 
 
                     // TODO: This is where we call all the functions to use our API
-                        // getArtistFromAPI(accessToken)
-                        // getArtistTopTracksFromAPI(accessToken)
+                    // getArtistFromAPI(accessToken)
+                    // getArtistTopTracksFromAPI(accessToken)
                     loadArtistDetails(accessToken, "Dua Lipa")
+                    val searchButton = findViewById<Button>(R.id.button2)
+                    searchButton.setOnClickListener {
+                        val intent = Intent(this@MainActivity, QueryPromptActivity::class.java)
+                        queryLauncher.launch(intent)
+                    }
+
                     // TODO: make a function that grabs a random song (from an artist - might be easier)
-                        //getArtistRandomTrack(accessToken)
+                    //getArtistRandomTrack(accessToken)
 
                     // TODO: Make a loop and call that function 20 times
 
@@ -83,6 +117,7 @@ class MainActivity : AppCompatActivity() {
             }
         )
     }
+
     private fun getArtistFromAPI(accessToken: String?) {
         if (accessToken.isNullOrEmpty()) {
             Log.d("Spotify API", "Access token is null or empty.")
