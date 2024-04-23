@@ -28,15 +28,13 @@ Top 3 choices
 3. Recipe Planner
 
 ## Final Chosen Idea
-1. Duolingo Cards
+1. Music Player ~ Spotify API - Tune Finder
 
 ## New App Ideas - Evaluate and Categorize
-1. Duolingo Cards
-   - **Description**: Provides an interface for users to view and track their duolingo progress as well as store the words of their language into flashcards all in one app! Learners will be able continue to fuel their duolingo passion with our creative app!  
-   - **Category:** Social Networking / Learning
-   - **Mobile:** Mobile is essential for ease of use and access. Most users would just want a quick peek at their and other peers progress, instead of having to login and view it. It would also be easier to just learn from your phone.
-   - **Story:** Fuels the competitive nature of learners to continue learning their language. 
-   - **Market:** Any user who already has a duolingo account will be able to use this app. 
-   - **Habit:** Users are using this daily to check their ranking and to continue to learn cards that they've forgotten. 
-   - **Scope:** V1 would be a basic interface of a users duolingo profile and the current words that they have already memorized. V2, users would be able to see their friends progress.
+   - **Category:** Music Discovery
+   - **Mobile:** Mobile is essential for ease of use and access. Most users would just want a quick peek at their favourite artists songs
+   - **Story:** Users want to find new artists or rediscover the music of artists they enjoy. 
+   - **Market:** Music enthusiasts, casual listeners
+   - **Habit:** Potentially habit-forming for music discovery.
+   - **Scope:** elatively narrow and achievable within a reasonable timeframe.
 ---
