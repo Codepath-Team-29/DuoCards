@@ -23,6 +23,7 @@ class ArtistAdapter(private val trackList: ArrayList<String>, private val topURL
         val trackName = trackList[position]
         holder.artistTrackTextView.text = trackName
 
+
         holder.playButton.setOnClickListener {
             val previewUrl = topURL[position] // Accessing the preview URL directly from trackList
             onPlayButtonClick(previewUrl)

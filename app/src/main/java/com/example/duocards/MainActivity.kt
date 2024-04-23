@@ -2,6 +2,7 @@ package com.example.duocards
 
 //import com.codepath.asynchttpclient.AsyncHttpClient
 //import com.codepath.asynchttpclient.RequestParams
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
@@ -348,7 +349,9 @@ class MainActivity : AppCompatActivity() {
                         Picasso.get().load(imageUrl).into(imageView)
                     }
 
-                    findViewById<TextView>(R.id.artistNameTextView).text = "Artist Name\n$artistName"
+                    findViewById<TextView>(R.id.artistNameTextView).text = "$artistName"
+                    findViewById<TextView>(R.id.artistNameTextView).setTextColor(Color.WHITE)
+
                     Log.d("Spotify API", "Success! Artist details: ${response?.toString()}")
                 }
             }
