@@ -81,7 +81,7 @@ Time spent: **10** hours spent in total
 
 ## Summary
 
-This app uses the Spotfy API to pull songs for a certain artist.
+This app uses the Spotfy API to pulls up the top 10 songs for a certain artist given an input with a preview of the song from an audio file.
 
 ## Milestone Requirements
 
